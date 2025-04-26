@@ -4,7 +4,7 @@ prueba tecnica fullstack
 Requisitos
 Python 3.8+
 
-Django 4.x
+Django 5.2
 
 Django REST Framework
 
