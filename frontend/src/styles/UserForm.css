@@ -1,0 +1,53 @@
+.user-form-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  color: #4a6cf7;
+  margin-bottom: 20px;
+  font-size: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f2f2f2;
+  text-align: center;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Estilos para errores de validación */
+.input-error {
+  border-color: #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+.field-error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .user-form-container {
+    padding: 15px;
+  }
+} 

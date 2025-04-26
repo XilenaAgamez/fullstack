@@ -1,0 +1,240 @@
+/* Estilos base comunes */
+:root {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --background-color: #f8f9fa;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: #333;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado de la aplicación */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.app-title {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Navegación de la aplicación */
+.app-navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  background-color: transparent;
+  color: var(--secondary-color);
+  padding: 8px 15px;
+  border: 1px solid #dee2e6;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: #f8f9fa;
+  border-color: #c8cfd6;
+}
+
+.nav-link.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.nav-link.active:hover {
+  background-color: #3a5de4;
+}
+
+/* Botón para alternar vistas (deprecated) */
+.btn-toggle {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-toggle:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btn-toggle.btn-active {
+  background-color: var(--primary-color);
+}
+
+.btn-toggle.btn-active:hover {
+  background-color: #3a5de4;
+}
+
+/* Mensajes de retroalimentación */
+.error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--error-color);
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  border-left: 4px solid var(--error-color);
+}
+
+.success-message {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  border-left: 4px solid var(--success-color);
+  animation: fadeOut 3s ease;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Estilos de botones comunes */
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Estilos de validación de formularios */
+.field-error-message {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.input-error {
+  border-color: var(--error-color) !important;
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* Estilos comunes para formularios */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: var(--border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(74, 108, 247, 0.25);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+  
+  .auth-box {
+    padding: 20px;
+  }
+  
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .app-navigation {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-link {
+    flex: 1;
+    text-align: center;
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+} 
